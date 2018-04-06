@@ -7,3 +7,14 @@
     template: src=/tmp/test.j2 dest=/root/testfile
     register: var_result
   - debug: var=var_result
+
+---
+- hosts: all
+  gather_facts: False
+  vars:
+  - my_var: "hello world"
+  - PORT: false
+  tasks:
+  - name: test {{ my_var  }}
+    template: src=/tmp/test_2.j2 dest=/root/testfile
+

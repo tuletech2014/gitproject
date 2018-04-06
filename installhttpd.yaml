@@ -1,0 +1,15 @@
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: install httpd
+   command: yum -y install httpd
+  - name: provide httpd.conf
+    copy : src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf"
+    tags: conf
+    notify:
+    - server restart
+  - name: server start
+    service: name=httpd state=started enabled=true
+  handlers:
+  - name: server restart
+    service: name=httpd state=restarted

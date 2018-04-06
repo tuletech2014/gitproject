@@ -4,3 +4,26 @@
     shell: echo "shell 1" >> /tmp/a
   - name: test copy
     copy: src=/tmp/a dest=/usr/local/src/
+
+#[{'tasks': [{'shell': 'echo "shell 1" >> /tmp/a', 'name': 'test ansible'}, {'copy': 'src=/tmp/a dest=/usr/local/src/', 'name': 'test copy'}], 'hosts': 'test'}]
+#- 横线代表一个list的开始
+- hosts: test
+- tasks:
+  - name: test ansible
+    shell: echo "shell 1" >> /tmp/a
+  - name: test copy
+    copy: src=/tmp/a dest=/usr/local/src/
+
+#[{'hosts': 'test'}, {'tasks': [{'shell': 'echo "shell 1" >> /tmp/a', 'name': 'test ansible'}, {'copy': 'src=/tmp/a dest=/usr/local/src/', 'name': 'test copy'}]}]
+
+name: Tom Smith
+age: 37
+spouse:
+    name: Jane Smith
+    age: 25
+children:
+ - name: Jimmy Smith
+   age: 15
+ - name1: Jenny Smith
+   age1: 12
+{'age': 37, 'spouse': {'age': 25, 'name': 'Jane Smith'}, 'name': 'Tom Smith', 'children': [{'age': 15, 'name': 'Jimmy Smith'}, {'age1': 12, 'name1': 'Jenny Smith'}]}
