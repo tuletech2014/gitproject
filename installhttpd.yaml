@@ -2,7 +2,7 @@
   remote_user: root
   tasks:
   - name: install httpd
-   command: yum -y install httpd
+    command: yum -y install httpd
   - name: provide httpd.conf
     copy : src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf"
     tags: conf
