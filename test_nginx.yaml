@@ -1,0 +1,10 @@
+- hosts: test
+  tasks:
+  - name: install nginx
+    command: yum install nginx -y
+  - name: copy nginx conf
+    copy: src=/root/nginx.conf dest=/etc/nginx/conf/ backup=yes
+  - name: nginx conf check
+    shell: /usr/sbin/nginx -t
+    register: nginx_result
+  - debug: var=nginx_result
