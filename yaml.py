@@ -1,9 +1,4 @@
 import yaml
-content = """
-python: all
-  while: 
-   - 16
-   - jk
-"""
-data = yaml.load(content)
-print data
+f = open("installhttpd.yaml")
+x = yaml.load(f)
+print x

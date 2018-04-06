@@ -13,3 +13,5 @@
   handlers:
   - name: server restart
     service: name=httpd state=restarted
+#tasks  hosts  remote_user handlers
+#[{'tasks': [{'command': 'yum -y install httpd', 'name': 'install httpd'}, {'copy': 'src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf"', 'notify': ['server restart'], 'tags': 'conf', 'name': 'provide httpd.conf'}, {'name': 'server start', 'service': 'name=httpd state=started enabled=true'}], 'hosts': 'test', 'remote_user': 'root', 'handlers': [{'name': 'server restart', 'service': 'name=httpd state=restarted'}]}]
