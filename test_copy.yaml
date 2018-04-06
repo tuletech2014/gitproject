@@ -1,0 +1,6 @@
+- hosts: test
+  tasks:
+  - name: test ansible
+    shell: echo "shell 1" >> /tmp/a
+  - name: test copy
+    copy: src=/tmp/a dest=/usr/local/src/
