@@ -1,4 +1,0 @@
-yasak_customerinfo 客户添加
-billinfo 添加货票信息
-maintags 客户提货
-Affichel 公告
