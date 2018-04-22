@@ -12,4 +12,4 @@ copy:src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf" \\调用ansible的
     service: name=httpd state=started enabled=true \\调用ansible的service模块的属性定义安装完成httpd以后httpd服务的管理
   handlers: \\定义接受关注的资源变化后执行的动作
   - name: server restart  \\任务描述
-    service: name=httpd state=restarted   \\当关注的资源发生变化后调用service模
+    service: name=httpd state=restarted   \\当关注的资源发生变化后调用service模ddd
