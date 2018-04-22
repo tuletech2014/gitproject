@@ -2,7 +2,7 @@
   gather_facts: False
   vars:
   - my_var: "hello world"
-    my_var2: "hangzhou"
+    my_var2: "hang masterrrrrrrrrrr2zhou"
   tasks:
   - name: test{{my_var}}
     shell: echo "aaaa{{my_var}} {{my_var2}}"
