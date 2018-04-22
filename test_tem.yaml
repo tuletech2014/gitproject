@@ -3,7 +3,7 @@
   vars:
   - my_var: "hello world lenar leanrdddddddd"
   tasks:
-  - name: test{{my_learnvar}}
+  - name: test{{my_learnvarxxx}}
     template: src=/tmp/test.j2 dest=/root/testfile
     register: var_result
   - debug: var=var_result
