@@ -1,7 +1,7 @@
 - hosts: test  \\主机组，在/etc/ansible/hosts定义
   remote_user: root  \\远端执行任务的用户
   tasks: \\任务
-  - name: install httpd  \\任务描述
+  - name: install httpd  \\任务描述ddd
    command: yum -y install httpd  \\调用ansible的command模块安装httpd
   - name: provide httpd.conf \\任务描述
 copy:src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf" \\调用ansible的copy模块，httpd安装完成后将事先准备好的httpd.conf文件复制到/etc/httpd/conf目录下
