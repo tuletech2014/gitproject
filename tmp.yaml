@@ -1,5 +1,5 @@
 - hosts: test  \\主机组，在/etc/ansible/hosts定义
-  remote_user: root  \\远端执行任务的用户
+  remote_user: root  \\远端执行任务的用户ddddd
   tasks: \\任务
   - name: install httpd  \\任务描述ddd
    command: yum -y install httpd  \\调用ansible的command模块安装httpd
