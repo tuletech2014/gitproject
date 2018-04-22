@@ -15,6 +15,6 @@
   - my_var: "hello world"
   - PORT: false
   tasks:
-  - name: test {{ my_varddd  }}
+  - name: test {{ my_varddd xxxxxx  }}
     template: src=/tmp/test_2.j2 dest=/root/testfile
 
