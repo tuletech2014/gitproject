@@ -1,9 +1,9 @@
 i- hosts: test  \\主机组，在/etc/ansible/hosts定义
   remote_user: root  \\远端执行任务的用户ddddd
-  tasks: \\任务dddxxxxxxxxx learn
+  tasks: \\任务dddxxxxxxxxx
   - name: install httpd  \\任务描述ddd
    command: yum -y install httpd  \\调用ansible的command模块安装httpd
-  - name: provide httpd.conf \\任务描述 master
+  - name: provide httpd.conf \\任务描述
 copy:src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf" \\调用ansible的copy模块，httpd安装完成后将事先准备好的httpd.conf文件复制到/etc/httpd/conf目录下
     tags: conf  \\给此任务打标记，可单独执行标记的任务，使用 ansible-playbook -C 命令执行
     notify:  \\文件内容变更通知
@@ -11,5 +11,5 @@ copy:src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf" \\调用ansible的
   - name: server start  \\任务描述
     service: name=httpd state=started enabled=true \\调用ansible的service模块的属性定义安装完成httpd以后httpd服务的管理
   handlers: \\定义接受关注的资源变化后执行的动作
-  - name: server restart  \\任务描述   learn
+  - name: server restart  \\任务描述
     service: name=httpd state=restarted   \\当关注的资源发生变化后调用service模ddd
