@@ -1,7 +1,7 @@
 - hosts: all
   gather_facts: False
   vars:
-  - my_var: "hello world"
+  - my_var: "hello master master world"
     my_var2: "hangzhou"
   tasks:
   - name: test{{my_var}}
