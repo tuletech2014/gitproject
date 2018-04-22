@@ -1,7 +1,7 @@
 - hosts: test
   tasks:
   - name: test ansible
-    shell: echo "learn leanr shell 1" >> /tmp/a
+    shell: echo "shell 1master master" >> /tmp/a
   - name: test copy
     copy: src=/tmp/a dest=/usr/local/src/
 
