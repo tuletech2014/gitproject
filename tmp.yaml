@@ -3,7 +3,7 @@ i- hosts: test  \\主机组，在/etc/ansible/hosts定义
   tasks: \\任务dddxxxxxxxxx
   - name: install httpd  \\任务描述ddd
    command: yum -y install httpd  \\调用ansible的command模块安装httpd
-  - name: provide httpd.conf \\任务描述
+  - name: provide httpd.conf \\任务描述 master
 copy:src="/root/httpd.conf" dest="/etc/httpd/conf/httpd.conf" \\调用ansible的copy模块，httpd安装完成后将事先准备好的httpd.conf文件复制到/etc/httpd/conf目录下
     tags: conf  \\给此任务打标记，可单独执行标记的任务，使用 ansible-playbook -C 命令执行
     notify:  \\文件内容变更通知
