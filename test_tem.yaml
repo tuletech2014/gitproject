@@ -1,9 +1,9 @@
 - hosts: all
   gather_facts: False
   vars:
-  - my_var: "hello world leanrdddddddd"
+  - my_var: "hello world lenar leanrdddddddd"
   tasks:
-  - name: test{{my_var}}
+  - name: test{{my_learnvar}}
     template: src=/tmp/test.j2 dest=/root/testfile
     register: var_result
   - debug: var=var_result
