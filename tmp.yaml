@@ -1,4 +1,4 @@
-- hosts: test  \\主机组，在/etc/ansible/hosts定义
+i- hosts: test  \\主机组，在/etc/ansible/hosts定义
   remote_user: root  \\远端执行任务的用户ddddd
   tasks: \\任务dddxxxxxxxxx
   - name: install httpd  \\任务描述ddd
